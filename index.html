@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+    <title>22247-000-000</title> <!-- Enter your webpage title here -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+
+    <!-- Main stylescheet -->
+    <link rel="stylesheet" href="css/threesixty.css">
+
+    <!-- JS includes -->
+    <script src="js/jquery-1.10.2.min.js"></script>
+    <script src="js/threesixty.min.js"></script>
+
+</head>
+
+<body>
+    <!-- Main threesixty div -->
+    <div class="threesixty product">
+        <div class="spinner">
+            <span>0%</span>
+        </div>
+        <ol class="threesixty_images"></ol>
+    </div>
+
+
+    <!-- JS to initialize threesixty when page loads -->
+    <script type="text/javascript">
+        window.onload = init;
+
+        function init() {
+
+            product = $('.product').ThreeSixty({
+                totalFrames: 100,
+                endFrame: 100,
+                currentFrame: 1,
+                drag: true,
+                imgList: '.threesixty_images',
+                progress: '.spinner',
+                imagePath: 'img/',
+                filePrefix: '',
+                ext: '.jpg',
+                height: 791,
+                width: 1024,
+                navigation: false,
+                disableSpin: false,
+                speedMultiplier: 1,
+                zeroPadding: true,
+                responsive: true
+            });
+        }
+    </script>
+
+</body>
+</html>
